@@ -1,51 +1,89 @@
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="4dp"
-    android:layout_marginRight="4dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_list_item_article_card"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_cl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@color/colorPrimaryDark">
 
         <!--suppress AndroidLintContentDescription -->
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@color/photo_placeholder" />
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/photo_placeholder"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/article_title"
-            style="@style/TextAppearance.AppCompat.Subhead"
+            style="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="4dp"
-            android:textColor="@color/ltgray"
             android:ellipsize="end"
-            android:maxLines="4" />
+            android:maxLines="3"
+            android:textSize="@dimen/article_title_list_card"
+            android:layout_marginStart="@dimen/margin_article_meta_list"
+            android:layout_marginEnd="@dimen/margin_article_meta_list"
+            android:layout_marginTop="@dimen/margin_article_meta_list"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextPrimaryLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thumbnail"
+            tools:text="Second Variety" />
 
         <TextView
-            android:id="@+id/article_subtitle"
+            android:id="@+id/article_date"
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp"
-            android:textColor="#6000"
+            android:layout_marginStart="@dimen/margin_article_meta_list"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/margin_article_meta_list"
+            android:ellipsize="end"
             android:maxLines="2"
-            android:ellipsize="end" />
-    </LinearLayout>
+
+            android:textSize="@dimen/article_date_list_card"
+
+            android:textColor="@color/colorTextSecondaryLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/article_title"
+            tools:text="Feb 12 2004" />
+
+        <TextView
+            android:id="@+id/article_author"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_article_meta_list"
+            android:layout_marginEnd="@dimen/margin_article_meta_list"
+            android:layout_marginBottom="@dimen/margin_article_meta_list"
+
+            android:textSize="@dimen/article_author_list_card"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorTextPrimaryLight"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/article_date"
+            tools:text="by Cory Doctorow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

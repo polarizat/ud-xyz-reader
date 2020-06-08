@@ -1,6 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
@@ -20,6 +21,20 @@
             android:layout_height="?actionBarSize"
             android:background="?selectableItemBackgroundBorderless"
             android:contentDescription="@string/up"
-            android:src="@drawable/ic_arrow_back" />
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
     </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="share"
+        android:layout_gravity="bottom|end"
+        app:elevation="@dimen/fab_elevation"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"
+        app:fabSize="normal"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_baseline_share_24"/>
+
 </FrameLayout>

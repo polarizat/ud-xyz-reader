@@ -16,10 +16,26 @@
 -->
 
 <resources>
-    <color name="photo_placeholder">#ccc</color>
+    <color name="photo_placeholder">#ACACAC</color>
 
-    <color name="theme_primary">#04561A</color>
-    <color name="theme_primary_dark">#04561A</color>
-    <color name="theme_accent">#04561A</color>
-    <color name="ltgray">#ffe0e0e0</color>
+    <color name="colorPrimaryLight">#FFC774</color>
+    <color name="colorPrimary">#D88D1E</color>
+    <color name="colorPrimaryDark">#1E1200</color>
+
+    <color name="colorAccent">#115F67</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorBodyTextBg">#EFEFEF</color>
+    <color name="colorLinkText">#126AAF</color>
+
+    <color name="colorTextPrimary">#3A3A3A</color>
+    <color name="colorTextPrimaryDark">#191919</color>
+    <color name="colorTextPrimaryLight">#FFFFFF</color>
+    <color name="colorTextSecondaryLight">#C1C1C1</color>
+
+    //I saw the logo colors but I prefer the color scheme from above
+    <color name="colorPrimaryLight2">#ff894f</color>
+    <color name="colorPrimary2">#FD5621</color>
+    <color name="colorPrimaryDark2">#c21b00</color>
+    <color name="colorAccent2">#00B081</color>
 </resources>
